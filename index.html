@@ -276,6 +276,39 @@
     @media(max-width:1100px) { .review-head,.takeaway-grid,.leader-grid,.deficiency-grid{grid-template-columns:1fr 1fr} .practice-meta,.rating-legend{grid-template-columns:1fr 1fr} .takeaway{border-bottom:1px solid var(--border)} }
     @media(max-width:700px) { .review-head,.takeaway-grid,.leader-grid,.deficiency-grid,.practice-meta,.rating-legend,.welcome-card{grid-template-columns:1fr} .takeaway{border-right:0} }
     @media print { .fill-in,.fill-inline{background:#fff} .review-card,.practice-card{break-inside:avoid-page;box-shadow:none} }
+
+    .mockup-banner { position:relative; z-index:5; margin:1rem auto 0; max-width:1240px; padding:.9rem 1.1rem; border:2px dashed #DC2626; border-radius:.7rem; background:#FEF2F2; color:#7F1D1D; font-size:.9rem; }
+    .sample-note { margin:-1.2rem 0 1.4rem; color:var(--text-muted); font-size:.8rem; font-style:italic; }
+    .sub-h { margin:1.8rem 0 .8rem; color:var(--navy); font-size:1.12rem; }
+    .big { display:block; color:var(--navy); font-size:1.35rem; line-height:1.2; margin-bottom:.15rem; }
+    .bar-chart { display:grid; gap:.45rem; padding:1rem 1.1rem; border:1px solid var(--border); border-radius:var(--radius-md); background:#fff; box-shadow:var(--shadow-sm); }
+    .bar-row { display:grid; grid-template-columns:11rem 1fr 3rem 10rem; gap:.75rem; align-items:center; font-size:.85rem; color:var(--text-soft); }
+    .bar-track { height:.9rem; border-radius:999px; background:var(--surface-soft); overflow:hidden; }
+    .bar-fill { display:block; height:100%; border-radius:999px; background:var(--teal); }
+    .bar-row.low .bar-fill { background:var(--orange); }
+    .bar-row.low .bar-label, .bar-row.low .bar-val { color:var(--orange-dark); font-weight:700; }
+    .bar-val { font-weight:600; color:var(--navy); }
+    .bar-low { color:var(--text-muted); font-size:.78rem; }
+    .legend-row { display:flex; flex-wrap:wrap; gap:.5rem; margin:0 0 .7rem; }
+    .lg { padding:.2rem .6rem; border-radius:999px; font-size:.75rem; font-weight:600; }
+    .h1 { background:#FDE2E1; color:#991B1B; } .h2 { background:#FFEBD5; color:#9A4A0B; } .h3 { background:#F1F5F9; color:#334155; } .h4 { background:#DDF1EC; color:#1F5E51; }
+    .results-table table { min-width:880px; } .results-table td, .results-table th { text-align:center; padding:.5rem .45rem; } .results-table td.row-heading { text-align:left; }
+    .results-table .avgc { font-weight:700; color:var(--navy); }
+    .pos-head td { background:var(--navy-dark) !important; color:#fff; text-align:left !important; font-weight:700; letter-spacing:.04em; text-transform:uppercase; font-size:.78rem; }
+    .pos-row td { background:#F1F5F9 !important; font-weight:600; color:var(--navy); }
+    .pos-tag { display:inline-block; min-width:1.6rem; padding:.1rem .45rem; border-radius:999px; font-weight:700; font-size:.75rem; }
+    .pos-F { background:var(--teal-soft); color:var(--teal-dark); } .pos-D { background:#EEF2FF; color:var(--navy); }
+    .team-row td { background:#EEF2FF !important; font-weight:700; color:var(--navy); }
+    .team-row td.lowavg, .results-table td.lowavg { background:var(--orange-soft) !important; color:var(--orange-dark); }
+    .metric-pill { display:inline-block; margin:.3rem 0 0; padding:.3rem .6rem; border-radius:999px; background:var(--orange-soft); color:var(--orange-dark); font-weight:700; font-size:.85rem; }
+    .concept-card p { color:var(--text-soft); font-size:.9rem; margin:.3rem 0 0; }
+    .practice-meta p { margin:.25rem 0 0; color:var(--text-soft); font-size:.9rem; }
+    .practice-head > p { margin:.25rem 0 0; color:var(--text-soft); font-size:.9rem; }
+    .phase { font-weight:500; color:var(--text-muted); }
+    .mini-img { display:block; width:150px; height:auto; border:1px solid var(--border); border-radius:.4rem; background:#fff; }
+    .ct-tag { display:block; margin-top:.3rem; color:var(--text-muted); font-size:.7rem; }
+    .no-diag { color:var(--text-muted); font-size:.78rem; font-style:italic; }
+    @media(max-width:800px){ .bar-row{grid-template-columns:8rem 1fr 2.5rem} .bar-low{display:none} }
 </style>
 </head>
 <body>
@@ -290,6 +323,7 @@
 <a href="#overview">Assessment</a>
 <a href="#metrics">10 Metrics</a>
 <a href="#looks-like">SkillShark View</a>
+<a href="#results">Team Results</a>
 <a href="#deficiencies">Deficiencies</a>
 <a href="#practices">3 Practices</a></nav>
 <main>
@@ -334,139 +368,83 @@
 </div>
 </div>
 </section>
+<section class="section" id="results">
+<div class="section-inner">
+<h2 class="section-title">Team Results: Evaluation #1</h2>
+<p class="section-intro">Start-of-season SkillShark evaluation, all 20 rostered players scored on every metric. Players are shown by code only.</p>
+<p class="sample-note">Sample data shown to illustrate the evaluation-to-practice process. Scores are each player's average across evaluators.</p>
+<div class="tracking-grid">
+<article class="tracking-card"><h3>Players Evaluated</h3><p><strong class="big">20</strong> 12 forwards, 6 defence and 2 goalies, 100% fully scored.</p></article>
+<article class="tracking-card"><h3>Team Average</h3><p><strong class="big">3.65</strong> out of 5 across all ten skater metrics.</p></article>
+<article class="tracking-card"><h3>Strongest Area</h3><p><strong class="big">Teammate</strong> 4.22 team average.</p></article>
+<article class="tracking-card"><h3>Biggest Gap</h3><p><strong class="big">Transitional Play</strong> 3.31 team average; 8 of 18 skaters at 3 or below.</p></article>
+</div>
+<h3 class="sub-h">Skater team averages (lowest first)</h3>
+<div class="bar-chart"><div class="bar-row low"><span class="bar-label">Transitional Play</span><span class="bar-track"><span class="bar-fill" style="width:66.1%"></span></span><span class="bar-val">3.31</span><span class="bar-low">8/18 at 3 or below</span></div><div class="bar-row low"><span class="bar-label">Offensive Team Play</span><span class="bar-track"><span class="bar-fill" style="width:67.2%"></span></span><span class="bar-val">3.36</span><span class="bar-low">8/18 at 3 or below</span></div><div class="bar-row low"><span class="bar-label">Compete Level</span><span class="bar-track"><span class="bar-fill" style="width:67.8%"></span></span><span class="bar-val">3.39</span><span class="bar-low">6/18 at 3 or below</span></div><div class="bar-row"><span class="bar-label">Defensive Team Play</span><span class="bar-track"><span class="bar-fill" style="width:68.9%"></span></span><span class="bar-val">3.44</span><span class="bar-low">6/18 at 3 or below</span></div><div class="bar-row"><span class="bar-label">Individual Puck Skills</span><span class="bar-track"><span class="bar-fill" style="width:69.4%"></span></span><span class="bar-val">3.47</span><span class="bar-low">5/18 at 3 or below</span></div><div class="bar-row"><span class="bar-label">Hockey IQ</span><span class="bar-track"><span class="bar-fill" style="width:70.0%"></span></span><span class="bar-val">3.50</span><span class="bar-low">4/18 at 3 or below</span></div><div class="bar-row"><span class="bar-label">Plays with Speed</span><span class="bar-track"><span class="bar-fill" style="width:77.2%"></span></span><span class="bar-val">3.86</span><span class="bar-low">1/18 at 3 or below</span></div><div class="bar-row"><span class="bar-label">Coachability</span><span class="bar-track"><span class="bar-fill" style="width:77.8%"></span></span><span class="bar-val">3.89</span><span class="bar-low">1/18 at 3 or below</span></div><div class="bar-row"><span class="bar-label">Skating</span><span class="bar-track"><span class="bar-fill" style="width:80.6%"></span></span><span class="bar-val">4.03</span><span class="bar-low">2/18 at 3 or below</span></div><div class="bar-row"><span class="bar-label">Teammate</span><span class="bar-track"><span class="bar-fill" style="width:84.4%"></span></span><span class="bar-val">4.22</span><span class="bar-low">0/18 at 3 or below</span></div></div>
+<p class="diagram-note">Highlighted: the three lowest team averages, which become the focus of the three practices below.</p>
+<h3 class="sub-h">Skater results</h3>
+<div class="legend-row"><span class="lg h1">2.5 or below</span><span class="lg h2">3.0</span><span class="lg h3">3.5</span><span class="lg h4">4.0 and up</span></div>
+<div class="table-wrap results-table"><table aria-label="Skater evaluation results"><thead><tr><th>Player</th><th>Pos</th><th title="Coachability">COA</th><th title="Teammate">TM</th><th title="Compete Level">CMP</th><th title="Plays with Speed">SPD</th><th title="Skating">SKT</th><th title="Individual Puck Skills">PCK</th><th title="Transitional Play">TRN</th><th title="Offensive Team Play">OTP</th><th title="Defensive Team Play">DTP</th><th title="Hockey IQ">IQ</th><th>Avg</th></tr></thead><tbody><tr class="pos-head"><td colspan="13">Forwards (12)</td></tr><tr><td class="row-heading">P02</td><td><span class="pos-tag pos-F">F</span></td><td class="h4">4</td><td class="h4">4</td><td class="h2">3</td><td class="h4">4</td><td class="h4">4</td><td class="h4">4</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="h4">4</td><td class="avgc">3.75</td></tr><tr><td class="row-heading">P04</td><td><span class="pos-tag pos-F">F</span></td><td class="h4">4</td><td class="h4">4</td><td class="h3">3.5</td><td class="h4">4</td><td class="h4">4</td><td class="h4">4</td><td class="h3">3.5</td><td class="h4">4</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="avgc">3.80</td></tr><tr><td class="row-heading">P06</td><td><span class="pos-tag pos-F">F</span></td><td class="h4">4.5</td><td class="h4">5</td><td class="h3">3.5</td><td class="h4">4</td><td class="h4">4.5</td><td class="h4">4</td><td class="h4">4</td><td class="h4">4</td><td class="h4">4</td><td class="h4">4</td><td class="avgc">4.15</td></tr><tr><td class="row-heading">P08</td><td><span class="pos-tag pos-F">F</span></td><td class="h4">4</td><td class="h4">4</td><td class="h3">3.5</td><td class="h4">4</td><td class="h4">4</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="h4">4</td><td class="h3">3.5</td><td class="h4">4</td><td class="avgc">3.80</td></tr><tr><td class="row-heading">P09</td><td><span class="pos-tag pos-F">F</span></td><td class="h3">3.5</td><td class="h4">4</td><td class="h2">3</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="h2">3</td><td class="h2">3</td><td class="h2">3</td><td class="h3">3.5</td><td class="avgc">3.35</td></tr><tr><td class="row-heading">P10</td><td><span class="pos-tag pos-F">F</span></td><td class="h4">4.5</td><td class="h4">5</td><td class="h4">4</td><td class="h4">4</td><td class="h4">4</td><td class="h3">3.5</td><td class="h4">4</td><td class="h3">3.5</td><td class="h4">4.5</td><td class="h4">4</td><td class="avgc">4.10</td></tr><tr><td class="row-heading">P11</td><td><span class="pos-tag pos-F">F</span></td><td class="h4">4</td><td class="h4">4.5</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="h2">3</td><td class="h2">3</td><td class="h2">3</td><td class="h2">3</td><td class="h2">3</td><td class="h3">3.5</td><td class="avgc">3.40</td></tr><tr><td class="row-heading">P14</td><td><span class="pos-tag pos-F">F</span></td><td class="h3">3.5</td><td class="h4">4.5</td><td class="h3">3.5</td><td class="h4">4</td><td class="h4">4</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="h4">4</td><td class="h3">3.5</td><td class="h4">4</td><td class="avgc">3.80</td></tr><tr><td class="row-heading">P15</td><td><span class="pos-tag pos-F">F</span></td><td class="h2">3</td><td class="h4">4</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="h4">4</td><td class="h2">3</td><td class="h2">3</td><td class="h2">3</td><td class="h2">3</td><td class="h2">3</td><td class="avgc">3.30</td></tr><tr><td class="row-heading">P17</td><td><span class="pos-tag pos-F">F</span></td><td class="h3">3.5</td><td class="h4">4</td><td class="h3">3.5</td><td class="h4">4</td><td class="h4">4.5</td><td class="h4">4</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="avgc">3.75</td></tr><tr><td class="row-heading">P18</td><td><span class="pos-tag pos-F">F</span></td><td class="h4">4</td><td class="h4">4</td><td class="h3">3.5</td><td class="h4">4.5</td><td class="h4">4.5</td><td class="h3">3.5</td><td class="h2">3</td><td class="h2">3</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="avgc">3.70</td></tr><tr><td class="row-heading">P20</td><td><span class="pos-tag pos-F">F</span></td><td class="h3">3.5</td><td class="h4">4</td><td class="h3">3.5</td><td class="h4">4.5</td><td class="h4">5</td><td class="h4">4</td><td class="h3">3.5</td><td class="h2">3</td><td class="h2">3</td><td class="h3">3.5</td><td class="avgc">3.75</td></tr><tr class="pos-row"><td class="row-heading" colspan="2">Forwards average</td><td>3.83</td><td>4.25</td><td>3.46</td><td>3.96</td><td>4.08</td><td>3.62</td><td>3.42</td><td>3.46</td><td>3.46</td><td>3.67</td><td class="avgc">3.72</td></tr><tr class="pos-head"><td colspan="13">Defence (6)</td></tr><tr><td class="row-heading">P03</td><td><span class="pos-tag pos-D">D</span></td><td class="h4">4.5</td><td class="h4">4.5</td><td class="h2">3</td><td class="h3">3.5</td><td class="h4">4</td><td class="h2">3</td><td class="h2">3</td><td class="h2">3</td><td class="h3">3.5</td><td class="h2">3</td><td class="avgc">3.50</td></tr><tr><td class="row-heading">P05</td><td><span class="pos-tag pos-D">D</span></td><td class="h4">4</td><td class="h4">4</td><td class="h3">3.5</td><td class="h4">4</td><td class="h4">4</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="avgc">3.70</td></tr><tr><td class="row-heading">P07</td><td><span class="pos-tag pos-D">D</span></td><td class="h4">4</td><td class="h4">4</td><td class="h4">4.5</td><td class="h4">4</td><td class="h4">4</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="h4">4</td><td class="h3">3.5</td><td class="avgc">3.85</td></tr><tr><td class="row-heading">P13</td><td><span class="pos-tag pos-D">D</span></td><td class="h3">3.5</td><td class="h4">4.5</td><td class="h1">2.5</td><td class="h2">3</td><td class="h2">3</td><td class="h1">2.5</td><td class="h1">2.5</td><td class="h1">2.5</td><td class="h2">3</td><td class="h1">2.5</td><td class="avgc">2.95</td></tr><tr><td class="row-heading">P16</td><td><span class="pos-tag pos-D">D</span></td><td class="h3">3.5</td><td class="h3">3.5</td><td class="h2">3</td><td class="h3">3.5</td><td class="h4">4</td><td class="h2">3</td><td class="h2">3</td><td class="h2">3</td><td class="h2">3</td><td class="h2">3</td><td class="avgc">3.25</td></tr><tr><td class="row-heading">P19</td><td><span class="pos-tag pos-D">D</span></td><td class="h4">4.5</td><td class="h4">4.5</td><td class="h2">3</td><td class="h4">4</td><td class="h4">4.5</td><td class="h3">3.5</td><td class="h2">3</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="avgc">3.75</td></tr><tr class="pos-row"><td class="row-heading" colspan="2">Defence average</td><td>4.00</td><td>4.17</td><td>3.25</td><td>3.67</td><td>3.92</td><td>3.17</td><td>3.08</td><td>3.17</td><td>3.42</td><td>3.17</td><td class="avgc">3.50</td></tr><tr class="team-row"><td class="row-heading" colspan="2">Team average</td><td class="">3.89</td><td class="">4.22</td><td class="lowavg">3.39</td><td class="">3.86</td><td class="">4.03</td><td class="">3.47</td><td class="lowavg">3.31</td><td class="lowavg">3.36</td><td class="">3.44</td><td class="">3.50</td><td class="avgc">3.65</td></tr></tbody></table></div>
+<p class="diagram-note">COA Coachability · TM Teammate · CMP Compete Level · SPD Plays with Speed · SKT Skating · PCK Individual Puck Skills · TRN Transitional Play · OTP Offensive Team Play · DTP Defensive Team Play · IQ Hockey IQ</p>
+<h3 class="sub-h">Goalie results (GOALIES template)</h3>
+<div class="table-wrap results-table"><table aria-label="Goalie evaluation results"><thead><tr><th>Goalie</th><th>Stance & Positioning</th><th>Crease Movement</th><th>Rebound Control</th><th>Save Technique</th><th>Tracking</th><th>Puck Handling</th><th>Battle / Compete</th><th>Coachability</th><th>Mental Toughness</th><th>Teammate</th></tr></thead><tbody><tr><td class="row-heading">P01</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="h2">3</td><td class="h2">3</td><td class="h4">4</td><td class="h2">3</td><td class="h4">4.5</td></tr><tr><td class="row-heading">P12</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="h3">3.5</td><td class="h2">3</td><td class="h4">4</td><td class="h4">4</td><td class="h4">4.5</td><td class="h4">4.5</td></tr><tr class="team-row"><td class="row-heading">Average</td><td class="">3.50</td><td class="">3.50</td><td class="">3.50</td><td class="">3.50</td><td class="">3.50</td><td class="lowavg">3.00</td><td class="">3.50</td><td class="">4.00</td><td class="">3.75</td><td class="">4.50</td></tr></tbody></table></div>
+<p class="diagram-note">Lowest goalie average: Puck Handling / Playmaking. Goalie puck-handling reps are built into Practice 1.</p>
+</div>
+</section>
 <section class="section" id="deficiencies">
 <div class="section-inner">
 <h2 class="section-title">Team Deficiencies Identified</h2>
-<p class="section-intro">The three lowest team-average areas (or the areas most limiting our game identity) become the focus of the three practices.</p>
-<div class="deficiency-grid">
-<article class="concept-card"><h3>Deficiency 1</h3><span class="field-label">SkillShark metric</span><span class="fill-in">[e.g. Transitional Play]</span><span class="field-label" style="margin-top:.7rem">What the evaluation showed</span><span class="fill-in tall">[Which part of the metric definition was the gap, e.g. 'first passes under pressure']</span><span class="field-label" style="margin-top:.7rem">Addressed in</span><p style="margin:.3rem 0 0"><a href="#practice-1">Practice 1</a></p></article><article class="concept-card"><h3>Deficiency 2</h3><span class="field-label">SkillShark metric</span><span class="fill-in">[e.g. Transitional Play]</span><span class="field-label" style="margin-top:.7rem">What the evaluation showed</span><span class="fill-in tall">[Which part of the metric definition was the gap, e.g. 'first passes under pressure']</span><span class="field-label" style="margin-top:.7rem">Addressed in</span><p style="margin:.3rem 0 0"><a href="#practice-2">Practice 2</a></p></article><article class="concept-card"><h3>Deficiency 3</h3><span class="field-label">SkillShark metric</span><span class="fill-in">[e.g. Transitional Play]</span><span class="field-label" style="margin-top:.7rem">What the evaluation showed</span><span class="fill-in tall">[Which part of the metric definition was the gap, e.g. 'first passes under pressure']</span><span class="field-label" style="margin-top:.7rem">Addressed in</span><p style="margin:.3rem 0 0"><a href="#practice-3">Practice 3</a></p></article>
-</div>
+<p class="section-intro">The three lowest team averages from Evaluation #1 become the focus of the three practices. Plays with Speed and Individual Puck Skills (3.86 and 3.47) are next, and are reinforced inside these practices.</p>
+<div class="deficiency-grid"><article class="concept-card"><h3>Deficiency 1</h3><span class="field-label">SkillShark metric</span><p class="metric-pill">Transitional Play &middot; team avg 3.31</p><span class="field-label" style="margin-top:.7rem">Part of the definition we target</span><p>Quick recognition of turnovers and first passes or controlled carries under pressure.</p><span class="field-label" style="margin-top:.7rem">What the evaluation showed</span><p>Players were slow to react when possession changed, and first passes after a turnover were often forced or late. Support for outlets was inconsistent. 8 of 18 skaters scored 3 or below.</p><span class="field-label" style="margin-top:.7rem">Addressed in</span><p style="margin:.3rem 0 0"><a href="#practice-1">Practice 1</a></p></article><article class="concept-card"><h3>Deficiency 2</h3><span class="field-label">SkillShark metric</span><p class="metric-pill">Offensive Team Play &middot; team avg 3.36</p><span class="field-label" style="margin-top:.7rem">Part of the definition we target</span><p>Puck support, finding open ice and being a threat to shoot or pass.</p><span class="field-label" style="margin-top:.7rem">What the evaluation showed</span><p>Away from the puck, players stood still instead of supporting. Entries were one-player plays and possession ended after the first pass. 8 of 18 skaters scored 3 or below.</p><span class="field-label" style="margin-top:.7rem">Addressed in</span><p style="margin:.3rem 0 0"><a href="#practice-2">Practice 2</a></p></article><article class="concept-card"><h3>Deficiency 3</h3><span class="field-label">SkillShark metric</span><p class="metric-pill">Compete Level &middot; team avg 3.39</p><span class="field-label" style="margin-top:.7rem">Part of the definition we target</span><p>Engagement in battles, winning pucks, body position and consistency of effort.</p><span class="field-label" style="margin-top:.7rem">What the evaluation showed</span><p>Effort dropped in board battles and around the net. Several players lost body position and gave up on second efforts. 6 of 18 skaters scored 3 or below.</p><span class="field-label" style="margin-top:.7rem">Addressed in</span><p style="margin:.3rem 0 0"><a href="#practice-3">Practice 3</a></p></article></div>
 </div>
 </section>
 <section class="section" id="practices">
 <div class="section-inner">
 <h2 class="section-title">Three Practice Plans</h2>
-<p class="section-intro">Each practice follows a skill-isolation to game-application progression so the targeted deficiency is taught, repeated, pressured and then applied in a team context.</p>
-<div class="stack-gap">
-<article class="practice-card" id="practice-1">
+<p class="section-intro">Each practice targets one deficiency and moves from skill isolation to game application. Drills with diagrams come from our association's CoachThem drill bank.</p>
+<div class="stack-gap"><article class="practice-card" id="practice-1">
 <div class="practice-head">
-<span class="drill-type">Practice 1</span>
-<h3><span class="fill-inline">[Practice title / theme]</span></h3>
+<span class="drill-type">Practice 1 &middot; targets Transitional Play</span>
+<h3>Win It, Move It, Go</h3>
 <div class="practice-meta">
-<div><span class="field-label">Date</span><span class="fill-in">[MM/DD/YYYY]</span></div>
-<div><span class="field-label">Duration / ice</span><span class="fill-in">[60 min, full ice]</span></div>
-<div><span class="field-label">Deficiency addressed</span><span class="fill-in">[Team deficiency #1 from assessment]</span></div>
-<div><span class="field-label">Players / equipment</span><span class="fill-in">[Pucks, cones, nets, pinnies]</span></div>
+<div><span class="field-label">When</span><p>Week 1 after evaluation</p></div>
+<div><span class="field-label">Duration / ice</span><p>60 min, full ice</p></div>
+<div><span class="field-label">Deficiency addressed</span><p>Transitional Play (team avg 3.31)</p></div>
+<div><span class="field-label">Players / equipment</span><p>12 F, 6 D, 2 G; pucks, cones, nets, pinnies</p></div>
 </div>
-<span class="field-label" style="margin-top:.9rem">Practice objectives</span>
-<span class="fill-in">[Two or three measurable objectives, e.g. 'complete 8 of 10 forehand-backhand passes in motion']</span>
+<span class="field-label" style="margin-top:.9rem">Measure of success</span>
+<p>Raise the team average in Transitional Play at the midseason SkillShark evaluation and cut the number of skaters scoring 3 or below (8 of 18 now).</p>
 </div>
-<div class="table-wrap"><table aria-label="Practice 1 plan"><thead><tr><th>Time / Phase</th><th>Drill</th><th>Diagram</th><th>Description &amp; Organization</th><th>Key Teaching Points</th></tr></thead><tbody><tr><td>0:00-0:10<br><span style="font-weight:500;color:var(--text-muted)">Warm-up / Activation</span></td>
-<td><span class="fill-in">[Drill name]</span></td>
-<td><div class="mini-diagram">Insert drill diagram</div></td>
-<td><span class="fill-in tall">[Skating and puck-touch warm-up that introduces the practice focus.]</span></td>
-<td><span class="fill-in tall">[3 key teaching points]</span></td></tr><tr><td>0:10-0:22<br><span style="font-weight:500;color:var(--text-muted)">Skill Isolation</span></td>
-<td><span class="fill-in">[Drill name]</span></td>
-<td><div class="mini-diagram">Insert drill diagram</div></td>
-<td><span class="fill-in tall">[Technical skill linked to Deficiency targeted, done with high repetition and low pressure.]</span></td>
-<td><span class="fill-in tall">[3 key teaching points]</span></td></tr><tr><td>0:22-0:34<br><span style="font-weight:500;color:var(--text-muted)">Skill Progression</span></td>
-<td><span class="fill-in">[Drill name]</span></td>
-<td><div class="mini-diagram">Insert drill diagram</div></td>
-<td><span class="fill-in tall">[Same skill with added speed, decision or passive pressure.]</span></td>
-<td><span class="fill-in tall">[3 key teaching points]</span></td></tr><tr><td>0:34-0:46<br><span style="font-weight:500;color:var(--text-muted)">Small-Area Game</span></td>
-<td><span class="fill-in">[Drill name]</span></td>
-<td><div class="mini-diagram">Insert drill diagram</div></td>
-<td><span class="fill-in tall">[Competitive small-area game that rewards the targeted skill.]</span></td>
-<td><span class="fill-in tall">[3 key teaching points]</span></td></tr><tr><td>0:46-0:56<br><span style="font-weight:500;color:var(--text-muted)">Team Application</span></td>
-<td><span class="fill-in">[Drill name]</span></td>
-<td><div class="mini-diagram">Insert drill diagram</div></td>
-<td><span class="fill-in tall">[Apply the skill inside a team-play pattern (breakout, rush or zone play).]</span></td>
-<td><span class="fill-in tall">[3 key teaching points]</span></td></tr><tr><td>0:56-1:00<br><span style="font-weight:500;color:var(--text-muted)">Cool-down &amp; Debrief</span></td>
-<td><span class="fill-in">[Drill name]</span></td>
-<td><div class="mini-diagram">Insert drill diagram</div></td>
-<td><span class="fill-in tall">[Low-intensity skate, one question to players: what did we improve today?]</span></td>
-<td><span class="fill-in tall">[3 key teaching points]</span></td></tr></tbody></table></div>
-<div class="reflection-row"><span class="field-label">Post-practice evaluation</span><span class="fill-in">[Did we meet the objectives? What will carry into the next practice?]</span></div>
+<div class="table-wrap"><table aria-label="Practice 1 plan"><thead><tr><th>Time / Phase</th><th>Drill</th><th>Diagram</th><th>Description &amp; Organization</th><th>Key Teaching Points</th></tr></thead><tbody><tr><td>0:00-0:10<br><span class="phase">Warm-up / Activation</span></td><td><strong>Partner passing in motion, then goalie puck-handling station</strong></td><td><span class="no-diag">Coach-led, no diagram</span></td><td>Pairs skate the neutral zone making forehand and backhand passes in stride. Goalies stop rims behind the net and set the puck for the D (goalie puck-handling gap).</td><td><ol class="teaching-point-list"><li>Pass and move: give it and go</li><li>Shoulder-check before every reception</li><li>Goalies: stop the rim, set it flat for the D</li></ol></td></tr><tr><td>0:10-0:22<br><span class="phase">Skill Isolation</span></td><td><strong>2v0 Continuous Backcheck</strong></td><td><a href="drills/ct-931255.jpg"><img class="mini-img" alt="2v0 Continuous Backcheck CoachThem diagram" src="drills/ct-931255.jpg"/></a><span class="ct-tag">CoachThem drill</span></td><td>Pairs attack 2v0 off a coach pass and stop at the net; the next pair leaves on the whistle and the first pair turns and backchecks. Every rep is a change of possession.</td><td><ol class="teaching-point-list"><li>Attack quickly and stop at the net</li><li>On the whistle, turn and recover with stick on the ice</li><li>First three strides after a turnover decide the play</li></ol></td></tr><tr><td>0:22-0:34<br><span class="phase">Skill Progression</span></td><td><strong>Turn and Burn</strong></td><td><a href="drills/ct-1699966.jpg"><img class="mini-img" alt="Turn and Burn CoachThem diagram" src="drills/ct-1699966.jpg"/></a><span class="ct-tag">CoachThem drill</span></td><td>Three forwards skate around the coach, pick up a spotted puck and attack 3-on-2. Part 2: the coach carries a puck into the neutral zone, the forwards track and strip it, then attack the original D again.</td><td><ol class="teaching-point-list"><li>Scan before the retrieval</li><li>Strip, turn north, find the middle lane</li><li>D: gap up and protect the blue line</li></ol></td></tr><tr><td>0:34-0:46<br><span class="phase">Small-Area Game</span></td><td><strong>Tracking and Sort Out 3v2</strong></td><td><a href="drills/ct-253681.jpg"><img class="mini-img" alt="Tracking and Sort Out 3v2 CoachThem diagram" src="drills/ct-253681.jpg"/></a><span class="ct-tag">CoachThem drill</span></td><td>3v2 below the hash marks. On the whistle the three forwards break out 3v2 the other way, and the three who were defending must backcheck and sort out their checks.</td><td><ol class="teaching-point-list"><li>Talk: who has who</li><li>Turn defence into offence in one pass</li><li>Backcheckers: inside lane, stick on the ice</li></ol></td></tr><tr><td>0:46-0:56<br><span class="phase">Team Application</span></td><td><strong>Turnover to rush, 5v5 controlled scrimmage</strong></td><td><span class="no-diag">Coach-led, no diagram</span></td><td>Coach dumps a loose puck on every whistle; the team that recovers must make a first pass within 3 seconds. Goal only counts if it comes from a transition rush.</td><td><ol class="teaching-point-list"><li>Recognize the turnover first</li><li>Simple first pass, then support</li><li>Reward the quick, correct decision</li></ol></td></tr><tr><td>0:56-1:00<br><span class="phase">Cool-down & Debrief</span></td><td><strong>Easy skate and one-question debrief</strong></td><td><span class="no-diag">Coach-led, no diagram</span></td><td>Ask: what did we do in the first three seconds after we won the puck?</td><td><ol class="teaching-point-list"><li>Name one good transition you saw</li><li>Connect it to Transitional Play</li><li>Set one focus for next practice</li></ol></td></tr></tbody></table></div>
 </article><article class="practice-card" id="practice-2">
 <div class="practice-head">
-<span class="drill-type">Practice 2</span>
-<h3><span class="fill-inline">[Practice title / theme]</span></h3>
+<span class="drill-type">Practice 2 &middot; targets Offensive Team Play</span>
+<h3>Five Connected</h3>
 <div class="practice-meta">
-<div><span class="field-label">Date</span><span class="fill-in">[MM/DD/YYYY]</span></div>
-<div><span class="field-label">Duration / ice</span><span class="fill-in">[60 min, full ice]</span></div>
-<div><span class="field-label">Deficiency addressed</span><span class="fill-in">[Team deficiency #2 from assessment]</span></div>
-<div><span class="field-label">Players / equipment</span><span class="fill-in">[Pucks, cones, nets, pinnies]</span></div>
+<div><span class="field-label">When</span><p>Week 3 after evaluation</p></div>
+<div><span class="field-label">Duration / ice</span><p>60 min, full ice</p></div>
+<div><span class="field-label">Deficiency addressed</span><p>Offensive Team Play (team avg 3.36)</p></div>
+<div><span class="field-label">Players / equipment</span><p>12 F, 6 D, 2 G; pucks, cones, nets, pinnies</p></div>
 </div>
-<span class="field-label" style="margin-top:.9rem">Practice objectives</span>
-<span class="fill-in">[Two or three measurable objectives, e.g. 'complete 8 of 10 forehand-backhand passes in motion']</span>
+<span class="field-label" style="margin-top:.9rem">Measure of success</span>
+<p>Raise the team average in Offensive Team Play at the midseason SkillShark evaluation and cut the number of skaters scoring 3 or below (8 of 18 now).</p>
 </div>
-<div class="table-wrap"><table aria-label="Practice 2 plan"><thead><tr><th>Time / Phase</th><th>Drill</th><th>Diagram</th><th>Description &amp; Organization</th><th>Key Teaching Points</th></tr></thead><tbody><tr><td>0:00-0:10<br><span style="font-weight:500;color:var(--text-muted)">Warm-up / Activation</span></td>
-<td><span class="fill-in">[Drill name]</span></td>
-<td><div class="mini-diagram">Insert drill diagram</div></td>
-<td><span class="fill-in tall">[Skating and puck-touch warm-up that introduces the practice focus.]</span></td>
-<td><span class="fill-in tall">[3 key teaching points]</span></td></tr><tr><td>0:10-0:22<br><span style="font-weight:500;color:var(--text-muted)">Skill Isolation</span></td>
-<td><span class="fill-in">[Drill name]</span></td>
-<td><div class="mini-diagram">Insert drill diagram</div></td>
-<td><span class="fill-in tall">[Technical skill linked to Deficiency targeted, done with high repetition and low pressure.]</span></td>
-<td><span class="fill-in tall">[3 key teaching points]</span></td></tr><tr><td>0:22-0:34<br><span style="font-weight:500;color:var(--text-muted)">Skill Progression</span></td>
-<td><span class="fill-in">[Drill name]</span></td>
-<td><div class="mini-diagram">Insert drill diagram</div></td>
-<td><span class="fill-in tall">[Same skill with added speed, decision or passive pressure.]</span></td>
-<td><span class="fill-in tall">[3 key teaching points]</span></td></tr><tr><td>0:34-0:46<br><span style="font-weight:500;color:var(--text-muted)">Small-Area Game</span></td>
-<td><span class="fill-in">[Drill name]</span></td>
-<td><div class="mini-diagram">Insert drill diagram</div></td>
-<td><span class="fill-in tall">[Competitive small-area game that rewards the targeted skill.]</span></td>
-<td><span class="fill-in tall">[3 key teaching points]</span></td></tr><tr><td>0:46-0:56<br><span style="font-weight:500;color:var(--text-muted)">Team Application</span></td>
-<td><span class="fill-in">[Drill name]</span></td>
-<td><div class="mini-diagram">Insert drill diagram</div></td>
-<td><span class="fill-in tall">[Apply the skill inside a team-play pattern (breakout, rush or zone play).]</span></td>
-<td><span class="fill-in tall">[3 key teaching points]</span></td></tr><tr><td>0:56-1:00<br><span style="font-weight:500;color:var(--text-muted)">Cool-down &amp; Debrief</span></td>
-<td><span class="fill-in">[Drill name]</span></td>
-<td><div class="mini-diagram">Insert drill diagram</div></td>
-<td><span class="fill-in tall">[Low-intensity skate, one question to players: what did we improve today?]</span></td>
-<td><span class="fill-in tall">[3 key teaching points]</span></td></tr></tbody></table></div>
-<div class="reflection-row"><span class="field-label">Post-practice evaluation</span><span class="fill-in">[Did we meet the objectives? What will carry into the next practice?]</span></div>
+<div class="table-wrap"><table aria-label="Practice 2 plan"><thead><tr><th>Time / Phase</th><th>Drill</th><th>Diagram</th><th>Description &amp; Organization</th><th>Key Teaching Points</th></tr></thead><tbody><tr><td>0:00-0:10<br><span class="phase">Warm-up / Activation</span></td><td><strong>Give-and-go passing lines into shots</strong></td><td><span class="no-diag">Coach-led, no diagram</span></td><td>Players pass to a coach or partner, skate to open ice for the return and shoot in stride.</td><td><ol class="teaching-point-list"><li>Pass, then move to open ice</li><li>Present a target with the stick</li><li>Shoot in stride</li></ol></td></tr><tr><td>0:10-0:22<br><span class="phase">Skill Isolation</span></td><td><strong>F1 to F3 Rotation for the Quick Shot</strong></td><td><a href="drills/ct-76626.jpg"><img class="mini-img" alt="F1 to F3 Rotation for the Quick Shot CoachThem diagram" src="drills/ct-76626.jpg"/></a><span class="ct-tag">CoachThem drill</span></td><td>Continuous: F1 retrieves and hits F2 below the goal line, then races through the middle to the high F3 spot for a pass and quick shot from the slot.</td><td><ol class="teaching-point-list"><li>Rotate fast from F1 to F3</li><li>Quick shot from the slot</li><li>Timing: arrive as the pass comes</li></ol></td></tr><tr><td>0:22-0:34<br><span class="phase">Skill Progression</span></td><td><strong>Half Ice Forecheck 3v2</strong></td><td><a href="drills/ct-69182.jpg"><img class="mini-img" alt="Half Ice Forecheck 3v2 CoachThem diagram" src="drills/ct-69182.jpg"/></a><span class="ct-tag">CoachThem drill</span></td><td>Forwards dump the puck in, forecheck and recover it against two D, then turn the recovered puck into a scoring chance.</td><td><ol class="teaching-point-list"><li>Separate player from puck</li><li>Race to the next spot</li><li>Recover, then attack right away</li></ol></td></tr><tr><td>0:34-0:46<br><span class="phase">Small-Area Game</span></td><td><strong>3v3 support game: two-touch rule</strong></td><td><span class="no-diag">Coach-led, no diagram</span></td><td>Half-ice 3v3; each player may touch the puck twice. Forces constant support and movement to open ice.</td><td><ol class="teaching-point-list"><li>Move before you receive</li><li>Triangles around the puck</li><li>Be a threat to shoot or pass</li></ol></td></tr><tr><td>0:46-0:56<br><span class="phase">Team Application</span></td><td><strong>Three-lane rush to net-front finish, 5v5</strong></td><td><span class="no-diag">Coach-led, no diagram</span></td><td>Breakout to a three-lane rush on every whistle. Goals count double if three players touched the puck in the offensive zone.</td><td><ol class="teaching-point-list"><li>Fill all three lanes</li><li>One player drives the net</li><li>Keep possession: support the puck carrier</li></ol></td></tr><tr><td>0:56-1:00<br><span class="phase">Cool-down & Debrief</span></td><td><strong>Easy skate and one-question debrief</strong></td><td><span class="no-diag">Coach-led, no diagram</span></td><td>Ask: when did we keep the puck longest, and why?</td><td><ol class="teaching-point-list"><li>Name one great support play</li><li>Connect it to Offensive Team Play</li><li>Carry it into the next game</li></ol></td></tr></tbody></table></div>
 </article><article class="practice-card" id="practice-3">
 <div class="practice-head">
-<span class="drill-type">Practice 3</span>
-<h3><span class="fill-inline">[Practice title / theme]</span></h3>
+<span class="drill-type">Practice 3 &middot; targets Compete Level</span>
+<h3>Own the Battle</h3>
 <div class="practice-meta">
-<div><span class="field-label">Date</span><span class="fill-in">[MM/DD/YYYY]</span></div>
-<div><span class="field-label">Duration / ice</span><span class="fill-in">[60 min, full ice]</span></div>
-<div><span class="field-label">Deficiency addressed</span><span class="fill-in">[Team deficiency #3 from assessment]</span></div>
-<div><span class="field-label">Players / equipment</span><span class="fill-in">[Pucks, cones, nets, pinnies]</span></div>
+<div><span class="field-label">When</span><p>Week 2 after evaluation</p></div>
+<div><span class="field-label">Duration / ice</span><p>60 min, full ice</p></div>
+<div><span class="field-label">Deficiency addressed</span><p>Compete Level (team avg 3.39)</p></div>
+<div><span class="field-label">Players / equipment</span><p>12 F, 6 D, 2 G; pucks, cones, nets, pinnies</p></div>
 </div>
-<span class="field-label" style="margin-top:.9rem">Practice objectives</span>
-<span class="fill-in">[Two or three measurable objectives, e.g. 'complete 8 of 10 forehand-backhand passes in motion']</span>
+<span class="field-label" style="margin-top:.9rem">Measure of success</span>
+<p>Raise the team average in Compete Level at the midseason SkillShark evaluation and cut the number of skaters scoring 3 or below (6 of 18 now).</p>
 </div>
-<div class="table-wrap"><table aria-label="Practice 3 plan"><thead><tr><th>Time / Phase</th><th>Drill</th><th>Diagram</th><th>Description &amp; Organization</th><th>Key Teaching Points</th></tr></thead><tbody><tr><td>0:00-0:10<br><span style="font-weight:500;color:var(--text-muted)">Warm-up / Activation</span></td>
-<td><span class="fill-in">[Drill name]</span></td>
-<td><div class="mini-diagram">Insert drill diagram</div></td>
-<td><span class="fill-in tall">[Skating and puck-touch warm-up that introduces the practice focus.]</span></td>
-<td><span class="fill-in tall">[3 key teaching points]</span></td></tr><tr><td>0:10-0:22<br><span style="font-weight:500;color:var(--text-muted)">Skill Isolation</span></td>
-<td><span class="fill-in">[Drill name]</span></td>
-<td><div class="mini-diagram">Insert drill diagram</div></td>
-<td><span class="fill-in tall">[Technical skill linked to Deficiency targeted, done with high repetition and low pressure.]</span></td>
-<td><span class="fill-in tall">[3 key teaching points]</span></td></tr><tr><td>0:22-0:34<br><span style="font-weight:500;color:var(--text-muted)">Skill Progression</span></td>
-<td><span class="fill-in">[Drill name]</span></td>
-<td><div class="mini-diagram">Insert drill diagram</div></td>
-<td><span class="fill-in tall">[Same skill with added speed, decision or passive pressure.]</span></td>
-<td><span class="fill-in tall">[3 key teaching points]</span></td></tr><tr><td>0:34-0:46<br><span style="font-weight:500;color:var(--text-muted)">Small-Area Game</span></td>
-<td><span class="fill-in">[Drill name]</span></td>
-<td><div class="mini-diagram">Insert drill diagram</div></td>
-<td><span class="fill-in tall">[Competitive small-area game that rewards the targeted skill.]</span></td>
-<td><span class="fill-in tall">[3 key teaching points]</span></td></tr><tr><td>0:46-0:56<br><span style="font-weight:500;color:var(--text-muted)">Team Application</span></td>
-<td><span class="fill-in">[Drill name]</span></td>
-<td><div class="mini-diagram">Insert drill diagram</div></td>
-<td><span class="fill-in tall">[Apply the skill inside a team-play pattern (breakout, rush or zone play).]</span></td>
-<td><span class="fill-in tall">[3 key teaching points]</span></td></tr><tr><td>0:56-1:00<br><span style="font-weight:500;color:var(--text-muted)">Cool-down &amp; Debrief</span></td>
-<td><span class="fill-in">[Drill name]</span></td>
-<td><div class="mini-diagram">Insert drill diagram</div></td>
-<td><span class="fill-in tall">[Low-intensity skate, one question to players: what did we improve today?]</span></td>
-<td><span class="fill-in tall">[3 key teaching points]</span></td></tr></tbody></table></div>
-<div class="reflection-row"><span class="field-label">Post-practice evaluation</span><span class="fill-in">[Did we meet the objectives? What will carry into the next practice?]</span></div>
-</article>
-</div>
+<div class="table-wrap"><table aria-label="Practice 3 plan"><thead><tr><th>Time / Phase</th><th>Drill</th><th>Diagram</th><th>Description &amp; Organization</th><th>Key Teaching Points</th></tr></thead><tbody><tr><td>0:00-0:10<br><span class="phase">Warm-up / Activation</span></td><td><strong>Edge work, stops and starts, then 1v1 puck-protection circles</strong></td><td><span class="no-diag">Coach-led, no diagram</span></td><td>Tight turns and stops at each dot, then partners protect a puck inside a faceoff circle for 20 seconds each.</td><td><ol class="teaching-point-list"><li>Low and wide base</li><li>Body between check and puck</li><li>Compete on every whistle</li></ol></td></tr><tr><td>0:10-0:22<br><span class="phase">Skill Isolation</span></td><td><strong>1v1 Corner Battle, 1v1 Box Out</strong></td><td><a href="drills/ct-1216535.jpg"><img class="mini-img" alt="1v1 Corner Battle, 1v1 Box Out CoachThem diagram" src="drills/ct-1216535.jpg"/></a><span class="ct-tag">CoachThem drill</span></td><td>Coach dumps a puck to the corner: D and F battle 1v1 to a goal or stoppage. A second puck goes to the point and the same pair battles for net-front position while the D shoots.</td><td><ol class="teaching-point-list"><li>Box out and lift sticks</li><li>Win the contact, then the puck</li><li>Second effort until the whistle</li></ol></td></tr><tr><td>0:22-0:34<br><span class="phase">Skill Progression</span></td><td><strong>Brad Shaw: Lemaire 2v2 N-Zone Angling</strong></td><td><a href="drills/ct-244179.jpg"><img class="mini-img" alt="Brad Shaw: Lemaire 2v2 N-Zone Angling CoachThem diagram" src="drills/ct-244179.jpg"/></a><span class="ct-tag">CoachThem drill</span></td><td>Coach passes to any of four players on the boards; that pair attacks while the other pair skates forward 100% to angle and check. Every change of possession flips who attacks.</td><td><ol class="teaching-point-list"><li>Skate forward 100% to check</li><li>Angle with stick in the lane</li><li>On a turnover, attack immediately</li></ol></td></tr><tr><td>0:34-0:46<br><span class="phase">Small-Area Game</span></td><td><strong>Giancola: 3v2 D Zone</strong></td><td><a href="drills/ct-131224.jpg"><img class="mini-img" alt="Giancola: 3v2 D Zone CoachThem diagram" src="drills/ct-131224.jpg"/></a><span class="ct-tag">CoachThem drill</span></td><td>Three forwards try to keep the puck low; the D pair and centre work together (man on, box behind) to win it and skate it out.</td><td><ol class="teaching-point-list"><li>Contain, gap, pressure</li><li>Lift sticks, move bodies out front</li><li>Win the puck, then get it out</li></ol></td></tr><tr><td>0:46-0:56<br><span class="phase">Team Application</span></td><td><strong>Puck-battle scrimmage</strong></td><td><span class="no-diag">Coach-led, no diagram</span></td><td>Half-ice 3v3: every puck starts in a corner battle. Points for battle wins as well as goals.</td><td><ol class="teaching-point-list"><li>Arrive first, arrive together</li><li>No floating, no stick-only checks</li><li>Reward the effort that wins the puck</li></ol></td></tr><tr><td>0:56-1:00<br><span class="phase">Cool-down & Debrief</span></td><td><strong>Easy skate and one-question debrief</strong></td><td><span class="no-diag">Coach-led, no diagram</span></td><td>Ask: what helped you win more battles today?</td><td><ol class="teaching-point-list"><li>Name a teammate's best battle</li><li>Connect it to Compete Level</li><li>Effort is a skill we practise</li></ol></td></tr></tbody></table></div>
+</article></div>
 </div>
 </section>
 </main>
